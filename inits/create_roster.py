@@ -3,7 +3,7 @@
 # python manage.py shell
 # execfile('./inits/create_roster.py')
 
-from baseball_app.models import Player
+from apps.baseball_app.models import Player
 
 Home = [[1, Scott, Podsednik], [2, Tadahito, Iguchi],[3, Carl, Everett], [4, Paul, Konerko], [5, Jermaine, Dye], [6, Aaron, Rowand], [7, AJ, Pierzynski], [8, Joe, Crede], [9, Juan, Uribe]]
 
