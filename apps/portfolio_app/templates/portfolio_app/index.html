@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Bald Mike Web Developer Portfolio">
+    <meta name="author" content="Bald Mike">
+    {% load static %}
+    <title>Bald Mike's Portfolio</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'portfolio_app/favicon/favicon.ico' %}">
+
+    <link href=" {% static 'portfolio_app/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <link href=" {% static 'portfolio_app/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+
+    <link href=" {% static 'portfolio_app/css/styles.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Flavors|Rammetto+One|Syncopate" rel="stylesheet">
+    
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container-fluid">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Bald Mike</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#skills">Tech</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Connect</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="name" id="bald_mike">Bald Mike</div>
+          <div class="text-uppercase name" id="web_dev">Web Developer</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#about">dive in</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class=" text-uppercase">Who is Bald Mike?</h2>
+            <h3 class="section-subheading text-muted">Dedicated, determined problem-solver with an eye for detail, a heart for others and a passion for creation. Pit Bull lover/foster/adopter/advocate/roommate. Volunteer. Equally at home in front of an audience or a screen. Bath-taker. Reformed night person. Impatiently optimistic. Music maker/mixer/lover/listener. Weak spot for the underdog. Sucker for a happy ending.</h3>
+            <h3 class="section-subheading text-muted">And I freakin' love making computers do stuff.</h3>
+            </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-image">
+                  <a href="#fascination" class="js-scroll-trigger"><img class="rounded-circle img-fluid" src="{% static 'portfolio_app/img/about/trs80.jpg' %}" alt=""></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="title">Inspiration</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="timeline-info">I wanted an Atari with all the games.</p> 
+                    <p class="timeline-info">I got a TRS-80 Color Computer with 4K of RAM.</p>
+                    <p class="timeline-info"> And in the few minutes each day I wasn't at friends' houses playing Atari, I learned just enough BASIC to get hooked. From a TRS-80 to a Commodore 64 to the X86 PC's of the 90s & the birth of the World Wide Web, I kept on the cutting edge of technology - as a user. </p>
+                  </div>
+                </div>
+                <div id="fascination"></div>
+              </li>
+              
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <a href="#education" class="js-scroll-trigger"><img class="rounded-circle img-fluid" src="{% static 'portfolio_app/img/about/c64.jpg' %}" alt=""></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="subheading title">Fascination</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="timeline-info">While my former professional career relied only incidentally on technology, my love of it grew and I never lost the passion for learning.  This passion led me to dive into HTML, CSS, and JavaScript and ultimately to completing <a href="http://www.codingdojo.com" target="blank">Coding Dojo's</a> 14 week, onsite web development bootcamp.</p>
+                  </div>
+                </div>
+                <div id="education"></div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                    <a href="#information" class="js-scroll-trigger"><img class="rounded-circle img-fluid" src="{% static 'portfolio_app/img/about/286.jpg' %}" alt=""></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="subheading title">Education</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="title2">Coding Dojo</p>
+                    <p class="timeline-info">14 week, onsite web-development bootcamp.</p>
+                    <p class="title2">Southern Illinois University</p>
+                    <p class="timeline-info">Bachelor of Science, Marketing</p>
+                    <p class="title2">University of Illinois, Chicago</p>
+                    <p class="timeline-info">General sciences, MCAT preparation</p>
+                  </div>
+                  <div id="information"></div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="{% static 'portfolio_app/img/about/mbp.jpg' %}" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="subheading title">Information</h4>
+                  </div>
+                  <div class="timeline-body">
+                      <p class="text-muted"><span class="title2">Languages</span><span class="timeline-info"> Python, JavaScript, C#</span></p>
+                      <p class="text-muted"><span class="title2">Frameworks</span><span class="timeline-info">Flask, Django, .NET Core, Angular4</span></p>
+                      <p class="text-muted"><span class="title2">Server Side</span><span class="timeline-info">Linux Ubuntu, Node, Express, Nginx</span></p>
+		                  <p class="text-muted"><span class="title2">Databases</span><span class="timeline-info"> SQLite, MySQL, Django ORM, PostgreSQL, MongoDB/Mongoose</span></p>
+                      <p class="text-muted"><span class="title2">Front End</span><span class="timeline-info">Bootstrap, jQuery, Materialize</span></p>
+                      <p class="text-muted"><span class="title2">Markup</span><span class="timeline-info">HTML5, CSS3</span></p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-image">
+                    <a href="#skills" class="js-scroll-trigger"><img class="rounded-circle img-fluid" src="{% static 'portfolio_app/img/about/cloud.jpg' %}" alt=""></a>
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="subheading title">Destination</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="timeline-info">As the power of technology finds its way around the globe, enriching the lives of those it touches, I am excited to be rowing the boat and not just along for the ride.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- tech skills -->
+    <section class="py-5" id="skills">
+      <div class="margin"></div>
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-md-2 col-sm-6">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/python.png' %}" alt="python logo">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/django.png' %}" alt="django ">
+          </div>
+          
+          <div class="col-md-2 col-sm-6">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/htmlcss.png' %}" alt="">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/js.png' %}" alt="">
+          </div>
+          
+          
+          
+          <div class="col-md-2 col-sm-6">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/csharp.png' %}" alt="">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/aspdotnet.png' %}" alt="">
+          </div>
+          
+          
+
+          <div class="col-md-2 col-sm-6">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/angular.png' %}" alt="">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/node.png' %}" alt="">
+          </div>
+
+          
+
+          <div class="col-md-2 col-sm-6">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/postgres.png' %}" alt="">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/mysql.png' %}" alt="">
+          </div>
+
+          
+          
+          <div class="col-md-2 col-sm-6">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/mongo.png' %}" alt="">
+              <img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/logos/git.png' %}" alt="">
+          </div>
+
+        </div>
+        <div class="col-lg-12 text-center margin2">
+            <h2 class="text-uppercase">Don't see the logo you're looking for?</h2>
+            <h5 class="text-uppercase">I'm ready, willing & able to add it!</h5>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="bg-light" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="text-uppercase">the portfolio of bald mike</h2>
+            <h3 class="section-subheading text-muted">Versatile Solutions for Modern Living</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="{% static 'portfolio_app/img/portfolio/resqmia.png' %}" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h5>www.resQmia.com</h5>
+              <p class="text-muted">Save Them All!</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="{% static 'portfolio_app/img/portfolio/crosstown.png' %}" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h5>Crosstown Classic</h5>
+              <p class="text-muted">Play Ball!</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="{% static 'portfolio_app/img/portfolio/wagdog.png' %}" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h5>WagDog</h5>
+              <p class="text-muted">Lonely, Dog?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-2 appear">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="http://www.twitter.com/baldmikesays" target="_blank" data-target="tool tip" title="Click to open Twitter and say hello!">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 appear">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="https://www.github.com/baldmike" target="_blank" data-target="tool tip" title="Click here to visit Bald Mike's GitHub - it's very nice">
+                  <i class="fa fa-github"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 appear">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/bald-mike-395294138/" data-target="tool tip" title="Click to go to Bald Mike's Linkedin page" target="_blank">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="mailto:baldmike312@gmail.com" target="_blank" data-target="tool tip" title="This will open your default mail client">            
+                  <i class="fa fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <h2 class="section-heading text-uppercase">Connect with Bald Mike</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="col-sm-12">
+            <span class="copyright">&copy;2018 No Problems Only.Solutions</span>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- resQmia Modal -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  
+                  <h2 class="text-uppercase">www.resQmia.com</h2>
+                  <p class="item-intro text-muted">Save them all!</p>
+                  <a href="/resQmia"><img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/portfolio/resqmia.png' %}" alt=""></a>
+                  <p>resQmia.com is a true labor of love!  I've been actively involved in animal rescue for years, and have always wanted to do more. When I heard my girlfriend, Mia (the director of operations of Alive Rescue) lament that she couldn't keep up with the 10 different spread sheets she uses to track the animals, the light bulb began to glow.</p>
+                  <p>resQmia.com, built in Python and Django, allows for the tracking of animals through the rescue journey with reminders for vetting and necessary services. It supports image-upload and features are being added as quickly as I can respond to "I really need it to _______!!"</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2018</li>
+                    <li>Deployment: <a href="http://www.resQmia.com" target="blank">www.resQmia.com</a>, Digital Ocean, Linux Ubuntu</li>
+                    <li>GitHub: <a href="https://github.com/baldmike/resQmia" target="blank">https://github.com/baldmike/resQmia</a></li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Baseball Modal -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Crosstown Classic</h2>
+                 
+                  <p class="item-intro text-muted">The 2005 World Champion Chicago White Sox host the 2016 World Champion Chicago Cubs in the game every Chicagoan has an opinion about...  Written in Python/Django, relying heavily on session and taking a less-is-more approach to design, this game allows you to play 9 full innings, pitch by picth, responsively and interactively</p>
+                  
+
+                  <a href="/baseball"><img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/portfolio/crosstown.png' %}" alt="Crosstown Classic screen shot"></a>
+
+                  <p class="item-intro text-muted">As a baseball lover and born-again tech nerd, this simple project is decades in the making for me and is the first thing I worked on upon completion of a coding bootcamp.  I built and utilized a simple API to populate the teams with the 9 unique players that held that lineup position most often in that season.  While each player currently has the same statistical outcomes, the ability for future customization of individual player's stats was written in.</p>
+                                 
+                  <p class="item-intro text-muted">Click the image above to play. Use the controls on the top left to pitch while on the field and either swing or watch the pitch while up to bat. Baserunners situationally advance automatically and all outcomes are statiscally ~VERY CLOSE!~ based on actual MLB statistics. Enjoy!</p>
+
+                  <ul class="list-inline">
+                    <li>Date: December 2017</li>
+                    <li>Tech: Python, Django, Bootstrap</li>
+                    <li>Deployment: AWS and Digital Ocean, Linux Ubuntu</li>
+                    <li>GitHub: <a href="https://github.com/baldmike/Crosstown-Classic" target="blank">https://github.com/baldmike/Crosstown-Classic</a></li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WagDog Modal -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2 class="text-uppercase">Wag Dog!</h2>
+                  <p class="item-intro text-muted">Lonely, dog?</p>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/XvSxZLzXVRs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  <p>Designed and presented for Coding Dojo's 'Project Week', WagDog began as a Match.com clone as a team project with cohort-mates <a href="https://github.com/ANickow">Alyssa Nickow</a> and <a href="https://github.com/julianauza">Julian Auza</a>. Once we learned that the dog dating community is grossly underserved, we put on our capes and set out to rectify that (and learned that there is a dating-site Lorem, providing hours of entertainment).</p>
+                  <p>WagDog ("What a Good Dog!") allows a user to register, upload a picture and create a detailed personal profile.  Once a profile is created, an algorithm matches the pup to dogs of similar lifestyles, hopes and dreams. If a butt-sniff is in order, the app allows you to send a "wink" or, for the slightly more brave breeds (usually Chihuahuas), in-app messaging to lay it on the line. Chihuahua coming on too strong? Block 'em!</p>
+                  <p>Focusing on GitHub-based pair programming and project deadlines, 'Project Week' is inteded to mimic the pressure and time constraints involved in delivering the MVP, as agreed on by the entire cohort.  'Finishing' WagDog a day early gave us the opportunity to slightly refactor some code and add a couple non-MVP features (messaging and user-block). Given more time, we all agreed that cleaning up the existing code would have taken preference over new, shiny features. But, hey, they work!</p>
+                  <p>Click on the video for a short demo.</p>
+                  <ul class="list-inline">
+                    <li>October 2017</li>
+                    <li>Tech: C#, .NET core, Bootstrap</li>
+                    <li>Deployment: Azure, Linux Ubuntu</li>
+                    <li>GitHub: <a href="https://github.com/baldmike/WagDog" target="blank">https://github.com/baldmike/WagDog</a></li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <script src="{% static 'portfolio_app/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'portfolio_app/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'portfolio_app/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'portfolio_app/js/portfolio.min.js' %}"></script>
+
+  </body>
+
+</html>

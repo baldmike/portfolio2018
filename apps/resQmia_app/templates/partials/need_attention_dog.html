@@ -1,0 +1,11 @@
+<div class="list-box">
+    {% for dog in dog_alert %}
+    <div class="col-sm-4">
+        <ul>
+            <li class="animal-list"><a href="/resQmia/select_dashboard/{{ dog.id }}"> {{ dog.name }} <br><img src="/resQmia/{{ dog.thumb.url }}" width="70" height="70"/></a></li>
+        </ul>
+    </div>
+    {% endfor %}
+</div>
+
+

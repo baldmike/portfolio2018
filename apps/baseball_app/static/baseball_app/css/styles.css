@@ -1,0 +1,141 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+.win {
+    padding-top: 200px;
+    height: 500px;
+    color: white;
+    background-color: black;
+    background-image: url(/images/scoreboard.jpg);
+    background-attachment: fixed;
+}
+
+table {
+    font-size: 20px;
+    border: 2px black solid;
+    background-color: lightgray;
+}
+
+th {
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+h3 {
+    display: inline;
+}
+
+.container {
+    background-color: gray;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.box {
+    font-size: 10px;
+    height: 100px;
+    border: 2px solid black;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(darkgray), to(white));
+    background-image: -webkit-linear-gradient(top, darkgray, white);
+    background-image: -moz-linear-gradient(top, darkgray, white);
+    background-image: linear-gradient(to bottom, darkgray, white);
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: scroll;
+}
+
+.big_box {
+    font-size: 12px;
+    margin-top: 20px;
+    border: 5px black solid;
+    border-radius: 10px;
+    height: 200px;
+    overflow: scroll;
+    background-color: white;
+}
+
+@media (min-width: 600px) {
+
+    .inning_box {
+        margin: 10px;
+        margin-left: 0px;
+        border: 1px solid black;
+        border-radius: 20px;
+        background: black;
+        font-size: 40px;
+        color: white;
+        height: 80px;
+    }
+}
+
+@media (min-width: 300) {
+
+    .side-boxR {
+        font-family: 'Cinzel', serif;
+        margin-top: 90px;
+        margin-left: -70px;
+    }    
+}
+
+@media (min-width: 300) {
+    .side-boxL {
+        padding: 90px;
+    }
+}
+
+
+.button {
+    margin: 10px;
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Cinzel', serif;
+    background-color: black;
+    color: white;
+}
+
+.main {
+    height: 250px;
+}
+
+.button_reset {
+    margin: 10px;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+}
+
+.outcome {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.scoreboard {
+    margin-top: 40px;
+}
+
+.events {
+    font-size: 20px;
+
+}
+
+.field {
+    padding-bottom: 40px;
+    padding-top: 20px;
+    
+}
+
+.cinzel-font {
+    font-family: 'Cinzel', serif;
+}

@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+body {
+    background-image: url('../images/puppy6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.brand {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px gray;
+}
+
+.brand2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+    color: hotpink;
+    text-shadow: 2px 2px 2px black;
+}
+
+.pink {
+    font-size: 20px;
+    background-color: hotpink;
+    font-family: 'Lobster', cursive;
+}

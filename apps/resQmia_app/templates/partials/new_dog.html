@@ -1,0 +1,96 @@
+<h3 class="title header">Add a New Dog</h3>
+<div class="list-box">
+    <form class="form-vertical" action="/resQmia/rescue_dog" method="post" id="new_dog_form" enctype="multipart/form-data">
+    {% csrf_token %}
+
+        <div class="form-group gender center">
+            <div class="col-xs-6">
+                <label class="radio-inline"><input type="radio" name="gender" id="male" value="male">Male</label>
+            </div>
+            <div class="col-xs-6">
+                <label class="radio-inline"><input type="radio" name="gender" id="female" value="female" checked="checked">Female</label>
+            </div>
+        </div>
+
+        <div class="2-8-2 col-sm-8 col-sm-offset-2">
+            <div class="form-group">
+                <label for="name" class="sr-only">Dog's Name</label>
+                <input type="text" class="form-control input-box" name="name" id="new_rescue_name" placeholder="Dog's Name" required autofocus>
+            </div>
+
+            <div class="form-group center">
+                <label for="birthdate" class="sr-only">Birthday</label>
+                <input type="text" name="birthdate" id="birthdate" class="form-control input-box" placeholder="Birthdate" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="description" class="sr-only">Description</label>
+                <input type="text" class="form-control input-box" name="description" id="description" placeholder="Breed/Description" minlength="3" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="weight" class="sr-only">Weight in pounds</label>
+                <input type="number" class="form-control input-box" name="weight" id="weight" placeholder="Weight">
+            </div>
+            
+            <div class="form-group center">
+                <label for="rescue_date" class="sr-only">RESCUE DATE!</label>
+                <input type="text" name="rescue_date" id="rescue_date" class="form-control input-box" placeholder="RESCUE DATE!" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+            </div>
+
+            <div class="form-group center">
+                <label for="source" class="sr-only">Select source </label>
+                <select name="source" id="source" class="form-control input-box" required>
+                    <option value="" selected>--Select Source--</option>
+                    <option value="crisp">CRISP</option>
+                    <option value="cacc">CACC</option>
+                    <option value="awl">AWL</option>
+                    <option value="stray">Stray</option>
+                    <option value="crisp">Alive!</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group center">
+                <label for="source_note" class="sr-only">Source Note</label>
+                <textarea name="source_note" class="form-control input-box" rows="3" placeholder="Source notes:" ></textarea>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-6 center">
+                    <label for="fixed" class="checkbox-inline">
+                    <input type="checkbox" name="fixed" id="fixed">Fixed?</label>
+                </div>
+                
+                <div class="col-xs-6 center">
+                    <label for="microchip" class="checkbox-inline">
+                    <input type="checkbox" name="microchip" id="microchip">Microchipped?</label>
+                </div>
+
+                <br>
+                <div class="form-group hidden" id="microchip-number">
+                    <label for="microchip-number" class="sr-only">Microchip Number</label>
+                    <input type="text" name="microchip_number" class="form-control" placeholder="Microchip Number">
+                </div>
+                
+            </div>
+
+            <div class="col-xs-12 center">
+                <label for="picture" class="checkbox-inline">
+                <input type="checkbox" name="picture" id="picture">Upload a picture?</label>
+            </div>
+            <br>
+            <div class="form-group picture-upload-box col-xs-8 col-xs-offset-2 hidden" id="picture_box">
+                <label for="thumb" class="control-label"><span class="glyphicon glyphicon-arrow-down"></span></label>
+                <br>
+                <div class="upload-button">
+                    <input class="upload-margin2" id="thumb_dog" type="file" name="thumb">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-xs-12">
+            <button type="submit" class="btn btn-yellow margin-top">Rescue!</button>
+        </div>
+    </form>
+</div>

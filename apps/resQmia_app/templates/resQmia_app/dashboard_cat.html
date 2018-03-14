@@ -1,0 +1,53 @@
+{% include 'partials/head.html' %}
+
+<body>
+    <div class="container-fluid">
+        {% include 'partials/nav_bar.html' %}
+        {% include 'partials/api_strip.html' %}        
+        
+        <div class="row">
+            <div class="col-sm-4">
+                {% include 'partials/nav_dog.html' %}
+                <div class="col-sm-12" style="display: block;" id="all_alerts">
+                    {% include 'partials/need_attention_dog.html' %}
+                </div>
+                <div class="col-sm-12" style="display: none;" id="all_dogs">
+                    {% include 'partials/our_dogs.html' %}
+                </div>
+                <div class="col-sm-12" style="display: none;" id="vaccines">
+                    {% include 'partials/vaccines_dog.html' %}
+                </div>
+                <div class="col-sm-12" style="display: none;" id="preventions">
+                    {% include 'partials/preventions_dog.html' %}
+                </div>
+                <div class="col-sm-12" style="display: none;" id="tests">
+                    {% include 'partials/tests_dog.html' %}
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                {% include 'partials/current_cat.html'%}
+            </div>
+
+            <div class="col-sm-4">
+                {% include 'partials/nav_cat.html' %}
+                <div class="col-sm-12" style="display: block;" id="all_alerts_cat">
+                    {% include 'partials/need_attention_cat.html' %}
+                </div>
+                <div class="col-sm-12" style="display: none;" id="all_cats">
+                    {% include 'partials/our_cats.html' %}
+                </div>
+                <div class="col-sm-12" style="display: none;" id="vaccines_cat">
+                    {% include 'partials/vaccines_cat.html' %}
+                </div>
+                <div class="col-sm-12" style="display: none;" id="preventions_cat">
+                    {% include 'partials/preventions_cat.html' %}
+                </div>
+                <div class="col-sm-12" style="display: none;" id="tests_cat">
+                    {% include 'partials/tests_cat.html' %}
+                </div>
+            </div>
+        </div>
+        <p class="api-strip">&copy;2018 Bald Mike - No problems, only solutions.</p>
+    </div>
+</body>

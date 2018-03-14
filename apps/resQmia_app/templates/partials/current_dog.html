@@ -1,0 +1,373 @@
+ {% for dog in current_dog %}
+ <div class="header">
+    <h3 class="title header center acme">{{ dog.name }}</h3>
+</div>
+<div class="list-box">
+    
+    <div class="attentions">
+        
+        <div class="col-sm-6">
+            <button{% if dog.fixed == False %} class="btn2 btn-yellow" id="fix_alert">NOT FIXED{% endif %}</button>
+        </div>
+        <div class="col-sm-6">
+            <button{% if dog.microchip_number == "0" %} class="btn2 btn-yellow" id="chip_alert">NEEDS MICROCHIP{% endif %}</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 hidden center" id="fix_box">
+            <form action="/resQmia/fix_dog/{{ dog.id }}" method="post">
+                {% csrf_token %}
+                <label for="fixed" class="checkbox-inline">
+                <input type="checkbox" name="fixed" id="fixed" required>Fixed</label>
+                <br>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-yellow" style="float: none">FIXED!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 hidden center" id="chip_box">
+            <form action="/resQmia/microchip_dog/{{ dog.id }}" method="post">
+                {% csrf_token %}
+                <label for="microchip-number" class="sr-only">Microchip Number</label>
+                <input type="text" name="microchip_number" class="input-box" placeholder="Microchip Number" required>
+                <br>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-yellow" style="float: none">CHIPPED!</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-6 selected">
+            <img src="/resQmia/{{ dog.thumb.url }}" class="img-responsive thumbnail current-pic" id="picture" data-toggle="tooltip" title="Click to update image" data-placement="bottom"/>
+        </div>
+        <div class="col-sm-6">
+            <ul>
+                <li class="col-sm-12 name center">{{ dog.name }}</li>
+                <li class="col-sm-12 center">{{ dog.description }}, {{ dog.weight }}lbs.</li>
+                <li class="col-sm-12 center">Born: {{ dog.birthdate }}</li>
+                <li class="col-sm-12 center">From: {{ dog.source }}</li>
+                <li class="col-sm-12 center"> on: {{ dog.rescue_date }}</li>
+                <li class="col-sm-12 center"{% if dog.microchip_number != "0" %}>Microchip Number: {{ dog.microchip_number }} {% endif %}</li>
+            </ul>
+        </div>
+
+        <div class="form-group picture-upload-box col-xs-8 col-xs-offset-2 hidden" id="picture_box">
+            <form action="/resQmia/update_picture/{{ dog.id }}" enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                <label for="thumb" class="control-label" style="float: left;"><span><strong>UPDATE PICTURE </strong><span class="glyphicon glyphicon-arrow-down"></span></span></label>
+                <br>
+                <div class="upload-button">
+                    <input class="upload-margin2" id="thumb_dog" type="file" name="thumb">
+                </div>
+                <button type="submit" class="btn btn-yellow margin-top">Update!</button>
+            </form>
+            
+        </div>
+    </div>        
+{% endfor %}
+
+    <h4 {% if current_dog %}><hr>Vaccinations Due:</h4>{% endif %}
+    {% for rabies in current_rabies %}
+    <div class="new-vac">
+        <div class="col-sm-8">
+            <li>Rabies due: {{ rabies.vaccine_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_rabies_button" class="btn btn-yellow">New Rabies</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_rabies">
+            <form action="/resQmia/new_vaccine_dog/{{ rabies.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">Rabies Number</label>
+                    <input type="number" name="vaccine_number" class="form-control" placeholder="Rabies Number">
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">New Rabies Vaccine Given </label>
+                    <input placeholder="Rabies GIVEN on: " type="text" class="form-control" name="vaccine_given" id="rabies_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Rabies Vaccine Due Date</label>
+                    <input placeholder="Rabies is now DUE on: " type="text" class="form-control" name="vaccine_due" id="rabies-due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-yellow">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% for da2pp in current_da2pp %}
+    <div class="new-vac">
+        <div class="col-sm-8">
+            <li>DA2PP due: {{ da2pp.vaccine_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_da2pp_button" class="btn btn-yellow">New DA2PP</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_da2pp">
+            <form action="/resQmia/new_vaccine_dog/{{ da2pp.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New DA2PP Vaccine Given </label>
+                    <input placeholder="DA2PP GIVEN on: " type="text" class="form-control" name="vaccine_given" id="da2pp_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">DA2PP Vaccine Due Date</label>
+                    <input placeholder="DA2PP is now DUE on: " type="text" class="form-control" name="vaccine_due" id="da2pp-due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <input hidden name="vaccine_number" value=0>
+                    <button type="submit" class="btn btn-yellow">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+    
+    {% for lepto in current_lepto %}
+    <div class="new-vac">
+        <div class="col-sm-8">
+            <li>Lepto due: {{ lepto.vaccine_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_lepto_button" class="btn btn-yellow">New Lepto</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_lepto">
+            <form action="/resQmia/new_vaccine_dog/{{ lepto.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New lepto Vaccine Given </label>
+                    <input placeholder="LEPTO GIVEN on: " type="text" class="form-control" name="vaccine_given" id="lepto_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">lepto Vaccine Due Date</label>
+                    <input placeholder="LEPTO is now DUE on: " type="text" class="form-control" name="vaccine_due" id="lepto-due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <input hidden name="vaccine_number" value=0>
+                    <button type="submit" class="btn btn-yellow">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+
+    {% for bord in current_bord %}
+    <div class="new-vac">
+        <div class="col-sm-8">
+            <li>Bord due: {{ bord.vaccine_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_bord_button" class="btn btn-yellow">New Bord</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_bord">
+            <form action="/resQmia/new_vaccine_dog/{{ bord.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New Bord Vaccine Given </label>
+                    <input placeholder="BORD GIVEN on: " type="text" class="form-control" name="vaccine_given" id="bord_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">bord Vaccine Due Date</label>
+                    <input placeholder="bord is now DUE on: " type="text" class="form-control" name="vaccine_due" id="bord-due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <input hidden name="vaccine_number" value=0>
+                    <button type="submit" class="btn btn-yellow">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+    
+    
+    {% for civ in current_civ %}
+    <div class="new-vac">
+        <div class="col-sm-8">
+            <li>CIV due: {{ civ.vaccine_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_civ_button" class="btn btn-yellow">New CIV</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_civ">
+            <form action="/resQmia/new_vaccine_dog/{{ civ.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New CIV Vaccine Given </label>
+                    <input placeholder="CIV GIVEN on: " type="text" class="form-control" name="vaccine_given" id="civ_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">CIV Vaccine Due Date</label>
+                    <input placeholder="CIV is now DUE on: " type="text" class="form-control" name="vaccine_due" id="civ-due" onfocus="(this.type='date')" onblur="(this.type='text')">
+                </div>
+                <div class="col-sm-4">
+                    <input hidden name="vaccine_number" value=0>
+                    <button type="submit" class="btn btn-yellow">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+    
+    {% for heart_prev in current_heartworm_prev %}
+    <h4 {% if current_dog %}><hr>Preventions Due:</h4>{% endif %}
+    <div class="new-prev">
+        <div class="col-sm-8">
+            <li>Hrtwrm Prev due: {{ heart_prev.prevention_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_heart_prev_button" class="btn btn-yellow">Heartworm</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_heart_prev">
+            <form action="/resQmia/new_prevention_dog/{{ heart_prev.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New Heartworm Prevention Given </label>
+                    <input placeholder="HW Prev GIVEN on: " type="text" class="form-control" name="prevention_given" id="heart_prev_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Heartworm Prevention Due Date</label>
+                    <input placeholder="HW Prev is now DUE on: " type="text" class="form-control" name="prevention_due" id="heart_prev_due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-yellow">ADD!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% for flea in current_flea_tick %}
+    
+    <div class="new-prev">
+        <div class="col-sm-8">
+            <li>Flea/Tick prev due: {{ flea.prevention_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_flea_prev_button" class="btn btn-yellow">Flea/Tick</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_flea_prev">
+            <form action="/resQmia/new_prevention_dog/{{ flea.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New Flea/Tick Prevention Given </label>
+                    <input placeholder="Flea Prev GIVEN on: " type="text" class="form-control" name="prevention_given" id="flea_prev_given" onfocus="(this.type='date')" onblur="(this.type='text')"  required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Flea Prevention Due Date</label>
+                    <input placeholder="Flea Prev is now DUE on: " type="text" class="form-control" name="prevention_due" id="flea_prev_due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-yellow">ADD!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+    <br>
+
+
+    <h4 {% if current_dog %}><hr>Tests Due:</h4>{% endif %}
+    {% for heart_test in current_heartworm_test %}
+
+    <div class="new-test">
+        
+        <div class="col-sm-8">
+            <li>{{ heart_test.test_name }} test due: {{ heart_test.test_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_heart_test_button" class="btn btn-yellow">Heartworm</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_heart_test">
+            <form action="/resQmia/new_test_dog/{{ heart_test.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New Heartworm Test Given </label>
+                    <input placeholder="Heartworm Test GIVEN on: " type="text" class="form-control" name="test_given" id="heart_test_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Heartworm Test Due Date</label>
+                    <input placeholder="Heartworm Test is now DUE on: " type="text" class="form-control" name="test_due" id="heart_test_due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-yellow">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+
+    {% for fecal in current_fecal %}
+    <div class="new-test">
+        <div class="col-sm-8">
+            <li>{{ fecal.test_name }} test due: {{ fecal.test_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_fecal_test_button" class="btn btn-yellow">fecal</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_fecal_test">
+            <form action="/resQmia/new_test_dog/{{ fecal.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New Fecal Test Given </label>
+                    <input placeholder="Fecal Test GIVEN on: " type="text" class="form-control" name="test_given" id="fecal_test_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Fecal Test Due Date</label>
+                    <input placeholder="Fecal Test is now DUE on: " type="text" class="form-control" name="test_due" id="fecal_test_due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-yellow">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% for worm in current_dewormer %}
+    <div class="new-test">
+        <div class="col-sm-8">
+            <li>{{ worm.test_name }} due: {{ worm.test_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_dewormer_button" class="btn btn-yellow">Dewormer</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_dewormer">
+            <form action="/resQmia/new_test_dog/{{ worm.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New Dewormer Given </label>
+                    <input placeholder="Dewormer GIVEN on: " type="text" class="form-control" name="test_given" id="dewormer_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Fecal Test Due Date</label>
+                    <input placeholder="Dewormer is now DUE on: " type="text" class="form-control" name="test_due" id="dewormer_due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-yellow">ADD</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+

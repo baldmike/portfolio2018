@@ -1,0 +1,9 @@
+<div class="list-box">
+    {% for cat in vaccines_cat %}
+    <div class="col-sm-4">
+        <ul>
+            <li class="animal-list"><a href="/select_dashboard/{{ cat.id }}"> {{ cat.name }} <br><img src="/resQmia/{{ cat.thumb.url }}" width="70" height="70"/></a></li>
+        </ul>
+    </div>
+    {% endfor %}
+</div>

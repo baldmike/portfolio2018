@@ -1,0 +1,251 @@
+{% for cat in current_cat %}
+<div class="header">
+    <h3 class="title header acme">{{ cat.name }}</h3>
+</div>
+
+<div class="list-box">
+
+    <div class="attentions">
+        <div class="col-sm-6">
+            <button{% if cat.fixed == False %} class="btn2 btn-yellow" id="fix_alert">NOT FIXED{% endif %}</button>
+        </div>
+        <div class="col-sm-6">
+            <button{% if cat.microchip_number == "0" %} class="btn2 btn-yellow" id="chip_alert">NEEDS MICROCHIP{% endif %}</button> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12 hidden" id="fix_box">
+            <form action="/fix_cat/{{ cat.id }}" method="post">
+                {% csrf_token %}
+                <label for="fixed" class="checkbox-inline">
+                <input type="checkbox" name="fixed" id="fixed" required>Fixed</label>
+                <br>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-yellow" style="float: none">FIXED!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 hidden" id="chip_box">
+            <form action="/microchip_cat/{{ cat.id }}" method="post">
+                {% csrf_token %}
+                <label for="microchip-number" class="sr-only">Microchip Number</label>
+                <input type="text" name="microchip_number" class="input-box" placeholder="Microchip Number" required>
+                <br>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-yellow" style="float: none">CHIPPED!</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-6 selected">
+                <img src="/resQmia/{{ cat.thumb.url }}" class="img-responsive thumbnail current-pic" id="picture" data-toggle="tooltip" title="Click to update image" data-placement="bottom"/>
+        </div>
+        <div class="col-sm-6">
+            <ul>
+                <li class="col-sm-12 name center">{{ cat.name }}</li>
+                <li class="col-sm-12 center">{{ cat.description }}, {{ cat.weight }}lbs.</li>
+                <li class="col-sm-12 center">Born: {{ cat.birthdate }}</li>
+                <li class="col-sm-12 center">From: {{ cat.source }}</li>
+                <li class="col-sm-12 center"> on: {{ cat.rescue_date }}</li>
+                <li class="col-sm-12 center"{% if cat.microchip_number != "0" %}>Microchip Number: {{ cat.microchip_number }} {% endif %}</li>
+            </ul>
+        </div>
+
+        <div class="form-group picture-upload-box col-xs-8 col-xs-offset-2 hidden" id="picture_box">
+            <form action="/update_picture_cat/{{ cat.id }}" enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                <label for="thumb" class="control-label" style="float: left;"><span><strong>UPDATE PICTURE </strong><span class="glyphicon glyphicon-arrow-down"></span></span></label>
+                <br>
+                <div class="upload-button">
+                    <input class="upload-margin2" id="thumb_cat" type="file" name="thumb">
+                </div>
+                <button type="submit" class="btn btn-yellow margin-top">Update!</button>
+            </form>
+            
+        </div>
+    </div>                
+    {% endfor %}
+
+    <h4 {% if current_cat %}><hr>Vaccinations Due:</h4>{% endif %}
+    {% for rabies in current_rabies %}
+    <div class="new-vac">
+        <div class="col-sm-8">
+            <li>Rabies due: {{ rabies.vaccine_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_rabies_button" class="btn btn-yellow">New Rabies</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_rabies">
+            <form action="/new_vaccine_cat/{{ rabies.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">Rabies Number</label>
+                    <input type="number" name="vaccine_number" class="form-control" placeholder="Rabies Number">
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">New Rabies Vaccine Given </label>
+                    <input placeholder="Rabies GIVEN on: " type="text" class="form-control" name="vaccine_given" id="rabies_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Rabies Vaccine Due Date</label>
+                    <input placeholder="Rabies is now DUE on: " type="text" class="form-control" name="vaccine_due" id="rabies-due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <input hidden name="vaccine_number" value=0>
+                    <button type="submit" class="btn btn-red">RABIES</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% for fvrcp in current_fvrcp %}
+    <div class="new-vac">
+        <div class="col-sm-8">
+            <li>FVRCP due: {{ fvrcp.vaccine_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_fvrcp_button" class="btn btn-yellow">New FVRCP</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_fvrcp">
+            <form action="/new_vaccine_cat/{{ fvrcp.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New FVRCP Vaccine Given </label>
+                    <input placeholder="FVRCP GIVEN on: " type="text" class="form-control" name="vaccine_given" id="fvrcp_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">FVRCP Vaccine Due Date</label>
+                    <input placeholder="FVRCP is now DUE on: " type="text" class="form-control" name="vaccine_due" id="fvrcp-due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <input hidden name="vaccine_number" value=0>
+                    <button type="submit" class="btn btn-yellow">FVRCP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+        
+        
+    <h4 {% if current_cat %}>Preventions Due:</h4>{% endif %}
+    {% for revolution in current_revolution %}
+    <div class="new-prev">
+        <div class="col-sm-8">
+            <li>Revo. due: {{ revolution.prevention_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_revolution_button" class="btn btn-yellow">New Revo</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_revolution">
+            <form action="/new_prevention_cat/{{ revolution.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New Revolution Prevention Given </label>
+                    <input placeholder="Revolution GIVEN on: " type="text" class="form-control" name="prevention_given" id="revolution_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Revolution Prevention Due Date</label>
+                    <input placeholder="Revolution is now DUE on: " type="text" class="form-control" name="prevention_due" id="revolution_due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-yellow">REVOLUTION</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+    {% for flea in current_flea %}
+    
+    <div class="new-prev">
+        <div class="col-sm-8">
+            <li>Flea prev due: {{ flea.prevention_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_flea_prev_button" class="btn btn-yellow">New Flea</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_flea_prev">
+            <form action="/new_prevention_cat/{{ flea.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New Flea/Tick Prevention Given </label>
+                    <input placeholder="Flea Prev GIVEN on: " type="text" class="form-control" name="prevention_given" id="flea_prev_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Flea Prevention Due Date</label>
+                    <input placeholder="Flea Prev is now DUE on: " type="text" class="form-control" name="prevention_due" id="flea_prev_due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-yellow">FLEA/TICK</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+    <h4 {% if current_cat %}>Tests Due:</h4>{% endif %}
+    {% for fivfelv in current_fivfelv %}
+
+    <div class="new-test">
+        <div class="col-sm-8">
+            <li>{{ fivfelv.test_name }} due: {{ fivfelv.test_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_fivfelv_button" class="btn btn-yellow">New FivFelv</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_fivfelv">
+            <form action="/new_test_cat/{{ fivfelv.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New Fiv-Felv Test Given </label>
+                    <input placeholder="Fiv-Felv Test GIVEN on: " type="text" class="form-control" name="test_given" id="fivfelv_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Fiv-Felv Test Due Date</label>
+                    <input placeholder="Fiv-Felv Test is now DUE on: " type="text" class="form-control" name="test_due" id="fivfelv_due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-yellow">FIV/FELV</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+
+
+    {% for fecal in current_fecal %}
+    <div class="new-test">
+        <div class="col-sm-8">
+            <li>{{ fecal.test_name }} test due: {{ fecal.test_due }}</li>
+        </div>
+    
+        <div class="col-sm-4">
+            <button id="new_fecal_test_button" class="btn btn-yellow">New Fecal</button>
+        </div>
+        <div class="col-sm-12 hidden" id="new_fecal_test">
+            <form action="/new_test_cat/{{ fecal.id }}" method="post">
+                {% csrf_token %}
+                <div class="col-sm-8">
+                    <label class="sr-only">New Fecal Test Given </label>
+                    <input placeholder="Fecal Test GIVEN on: " type="text" class="form-control" name="test_given" id="fecal_test_given" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-8">
+                    <label class="sr-only">Fecal Test Due Date</label>
+                    <input placeholder="Fecal Test is now DUE on: " type="text" class="form-control" name="test_due" id="fecal_test_due" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-yellow">FECAL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% endfor %} 
+</div>

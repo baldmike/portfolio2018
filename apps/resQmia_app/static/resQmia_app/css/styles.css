@@ -1,0 +1,209 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+body {
+    background-image: url('../images/back3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+label {
+    font-size: 1.1em;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+}
+
+button:focus {
+    outline: 0;
+    background-color: yellow;
+    color: black;
+}
+
+button:hover {
+    background-color: black;
+    color: yellow;
+}
+
+.input-box {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.title {
+    background-color: rgb(212, 212, 212);
+    padding-left: 15px;
+    padding-top: 10px;
+    opacity: .8;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: black;
+    border: 3px solid black;
+    height: 100px;
+    padding-bottom: 10px;
+}
+
+.header {
+    font-size: 56px;
+    text-shadow: 3px 3px 3px white;
+}
+
+.animal-list {
+    font-family: 'Anton', sans-serif;
+}
+.list-box {
+    height: 65vh;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: tan;
+    opacity: .8;
+    overflow: scroll;
+}
+
+.picture-upload-box {
+    margin-top: 5%;
+    padding: 2%;
+    color: black;
+    border-radius: 10px;
+}
+
+.upload-margin1 {
+    margin-left: 10%;
+}
+
+.upload-margin2 {
+    margin-left: 35%;
+}
+
+.gender {
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.api-strip {
+    font-family: 'Anton', sans-serif;
+    color: black;
+    text-shadow: 2px 2px 2px white;
+    margin: 5px;
+}
+
+.btn {
+    width: 120px;
+    border-radius: 5px;
+}
+
+.btn2 {
+    width: 90%;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    background-color: tan;
+    opacity: .7;
+    font-size: 30px;
+}
+
+#fix_box, #chip_box {
+    margin-bottom: 20px;
+}
+
+.current-input {
+    background-color: #70787D;
+    color: white;
+}
+
+.current-pic {
+    margin-left: 20px;
+}
+
+.attentions {
+    margin-top: 10px;
+}
+
+.brand {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px gray;
+}
+
+.brand2 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+    color: hotpink;
+    text-shadow: 2px 2px 2px black;
+}
+
+.brand3 {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px gray;
+    padding-right: 30px;
+}
+
+.brand4 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 30px;
+    color: hotpink;
+    text-shadow: 2px 2px 2px black;
+}
+.pink {
+    font-size: 20px;
+    background-color: hotpink;
+    font-family: 'Lobster', cursive;
+}
+
+.margin-top {
+    margin-top: 10%;
+}
+
+.btn-yellow {
+    background-color: yellow;
+    color: black;
+    margin: 5px;
+}
+
+.btn-white {
+    background-color: white;
+    margin: 10px 5px 10px 5px;
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.btn-selected {
+    background-color: yellow;
+    margin: 5px 5px 5px 5px;
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px black;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    margin: 5px;
+}
+
+.acme {
+    font-family: 'Acme', sans-serif;
+}
+
+
+    
