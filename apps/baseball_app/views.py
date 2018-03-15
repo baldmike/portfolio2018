@@ -183,7 +183,7 @@ def swing(request):
                        
             if request.session['out'] == 3:
                 if request.session['curr_inn'] == 17:
-                    return redirect('/game_over')
+                    return redirect('/baseball/game_over')
                 end_of_inning(request)
 
             reset_at_bat(request)
@@ -207,7 +207,7 @@ def swing(request):
             request.session['out'] += 1
             if request.session['out'] == 3:
                 if request.session['curr_inn'] == 17:
-                    return redirect('/game_over')
+                    return redirect('/baseball/game_over')
                 end_of_inning(request)
             
             reset_at_bat(request)
@@ -219,7 +219,7 @@ def swing(request):
             request.session['out'] += 1
             if request.session['out'] == 3:
                 if request.session['curr_inn'] == 17:
-                    return redirect('/game_over')
+                    return redirect('/baseball/game_over')
                 end_of_inning(request)
             if request.session['first'] == False and request.session['second'] == False and request.session['third']:
                 if request.session['out'] < 3:
@@ -233,7 +233,7 @@ def swing(request):
             request.session['out'] += 1
             if request.session['out'] == 3:
                 if request.session['curr_inn'] == 17:
-                    return redirect('/game_over')
+                    return redirect('/baseball/game_over')
                 end_of_inning(request)
             if request.session['third']:
                 if request.session['out'] < 3:
