@@ -2,7 +2,6 @@
     "title": "Bald Mike's Portfolio",
     "version": "4.0.0",
     "license": "MIT",
-    "author": "Bald Mike",
     "dependencies": {
         "bootstrap": "4.0.0",
         "font-awesome": "4.7.0",
