@@ -5,22 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Bald Mike Web Developer Portfolio">
     <meta name="author" content="Bald Mike">
+    
     {% load static %}
+
     <title>Bald Mike's Portfolio</title>
 
     <link rel="icon" type="image/x-icon" href="{% static 'portfolio_app/favicon/favicon.ico' %}">
-
     <link href=" {% static 'portfolio_app/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-
     <link href=" {% static 'portfolio_app/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href=" {% static 'portfolio_app/css/styles.css' %}" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
-
-    <link href=" {% static 'portfolio_app/css/styles.css' %}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Flavors|Rammetto+One|Syncopate" rel="stylesheet">
     
   </head>
@@ -214,7 +213,7 @@
         </div>
         <div class="col-lg-12 text-center margin2">
           <h2 class="text-uppercase">Don't see the logo you're looking for?</h2>
-          <h5 class="text-uppercase">I'd love to add it!</h5>
+          <h5 class="text-uppercase">Let me know, I'd love to add it!</h5>
         </div>
       </div>
     </section>
@@ -349,12 +348,17 @@
                   
                   <h2 class="text-uppercase">www.resQmia.com</h2>
                   <p class="item-intro text-muted">Save them all!</p>
-                  <a href="/resQmia"><img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/portfolio/resqmia.png' %}" alt=""></a>
-                  <p>resQmia.com is a true labor of love!  I've been actively involved in animal rescue for years, and have always wanted to do more. When I heard my girlfriend, Mia (the director of operations of Alive Rescue) lament that she couldn't keep up with the 10 different spread sheets she uses to track the animals, the light bulb began to glow. It was dim at first, but it glowed..</p>
-                  <p>resQmia.com, built in Python and Django, allows for the tracking of animals through the rescue journey with reminders for vetting and necessary services. It supports image-upload and features are being added as quickly as I can respond to "I really need it to _______!!"</p>
-                  <p>Click on the image to load the app, and then click 'Login' - no credentials necessary.  When you're finished checking it out (and please feel free to play!  Add a dog! Go nuts!), simply click 'Logout' on the top right to bring you back here.</p>
-                  <ul class="list-inline">
+                  <div class="project-box">
+                    <a href="/resQmia"><img class="img-fluid d-block mx-auto" src="{% static  'portfolio_app/img/portfolio/resqmia.png' %}" alt=""></a>
+                    <p class="item-intro text-muted"><em>Click the image, then click "login" for a demo. To return, click "logout".</em></p>
+                  </div>
+                    <p>resQmia.com is a true labor of love!  I've been actively involved in animal rescue for years, and have always wanted to do more. When I heard my girlfriend, Mia (the director of operations of Alive Rescue) lament that she couldn't keep up with the 10 different spread sheets she uses to track the animals, the light bulb began to glow. It was dim at first, but it glowed.</p>
+                    <p>resQmia.com, built in Python/Django, allows for the tracking of animals through the rescue journey with reminders for vetting and necessary services. It supports image-upload, allows the user to sort based on needed services and features are being added as quickly as I can respond to "I really need it to _______!!"</p>
+                    <p>Click on the image to load the app, and then click 'Login' - no credentials necessary.  When you're finished checking it out (This is a demo version, so please feel free to play!  Give a dog a vaccine! Go nuts!), simply click 'Logout' on the top right to bring you back.</p>
+                  
+                    <ul class="list-inline">
                     <li>Date: January 2018</li>
+                    <li>Tech: Python, Django, JavaScript, Jquery, Bootstrap</li>
                     <li>Deployment: <a href="http://www.resQmia.com" target="blank">www.resQmia.com</a>, Digital Ocean, Linux Ubuntu</li>
                     <li>GitHub: <a href="https://github.com/baldmike/resQmia" target="blank">https://github.com/baldmike/resQmia</a></li>
                   </ul>
@@ -385,14 +389,19 @@
                   <!-- Project Details Go Here -->
                   <h2 class="text-uppercase">Crosstown Classic</h2>
                  
-                  <p class="item-intro text-muted">The 2005 World Champion Chicago White Sox host the 2016 World Champion Chicago Cubs in the game every Chicagoan has an opinion about...  Written in Python/Django, relying heavily on session and taking a less-is-more approach to design, this game allows you to play 9 full innings, pitch by picth, responsively and interactively.</p>
+                  <p class="item-intro text-muted">88 or 108 years? Sweep the World Series or make your fans suffer through 7 games? I'm totally unbiased, YOU decide who's better!</p>
+                
+
+                  <div class="project box">
+                    <a href="/baseball"><img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/portfolio/crosstown.png' %}" alt="Crosstown Classic screen shot"></a>
+                    <p class="item-intro text-muted">Click the image to play.  Use the controls on the top left, and click the red button on the bottom to bring you back when you're done.</p>
+                  </div>
                   
 
-                  <a href="/baseball"><img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/portfolio/crosstown.png' %}" alt="Crosstown Classic screen shot"></a>
-
-                  <p class="item-intro text-muted">As a baseball lover and born-again tech nerd, this simple project is decades in the making for me and is the first thing I worked on upon completion of a coding bootcamp.  I built and utilized a simple API to populate the teams with the 9 unique players that held that lineup position most often in that season.  While each player currently has the same statistical outcomes, the ability for future customization of individual player's stats was written in.</p>
+                  <p>The 2005 World Champion Chicago White Sox host the 2016 World Champion Chicago Cubs in the game every Chicagoan has an opinion about...  Written in Python/Django, relying heavily on session and taking a less-is-more approach to design, this game allows you to play 9 full innings, pitch by picth, responsively and interactively.</p>
+                  <p>As a baseball lover and born-again tech nerd, this simple project is decades in the making for me and is the first thing I worked on upon completion of a coding bootcamp.  I built and utilized a simple API to populate the teams with the 9 unique players that held that lineup position most often in that season.  While each player currently has the same statistical outcomes, the ability for future customization of individual player's stats was written in.</p>
                                  
-                  <p class="item-intro text-muted">Click the image above to play. Use the controls on the top left to pitch while on the field and either swing or watch the pitch while up to bat. Baserunners situationally advance automatically and all outcomes are statiscally ~VERY CLOSE!~ based on actual MLB statistics. Enjoy!</p>
+                  <p>Click the image above to play. Use the controls on the top left to pitch while on the field and either swing or watch the pitch while up to bat. Baserunners situationally advance automatically and all outcomes are statiscally ~VERY CLOSE!~ based on actual MLB statistics. Enjoy!</p>
 
                   <p>When you've had enough, click the red button on the bottom of the page to bring you back here!</p>
 

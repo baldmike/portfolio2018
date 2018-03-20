@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name='viewport' content="width=device-width initial-scale=1.0" media="screen" title="resQmia" charset="UTF-8">
+    <meta name='viewport' content="width=device-width initial-scale=1.0" media="screen" charset="UTF-8">
 
     {% load static %}
+
+    <title>resQmia!</title>
+
     <link rel="icon" type="image/x-icon" href="{% static 'resQmia_app/favicon/bigQ.ico' %}">
     <link rel="shortcut icon" href="{% static 'resQmia_app/favicon/bigQ.ico' %}" type="image/x-icon"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,10 +32,10 @@
                     {% csrf_token %}
                 
                 <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email_login" aria-describedby="emailHelp" placeholder="Email - Disabled" disabled>
+                    <input type="email" class="form-control" name="email" id="email_login" aria-describedby="emailHelp" placeholder="Demo - Version" disabled>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="password" id="password_login" aria-describedby="emailHelp" placeholder="Password - Disabled" disabled>
+                    <input type="password" class="form-control" name="password" id="password_login" aria-describedby="emailHelp" placeholder="Click login below!" disabled>
                 </div>
                 <button type="submit" name="login" class="btn pink" id="login_button">login</button>
                 </form>
