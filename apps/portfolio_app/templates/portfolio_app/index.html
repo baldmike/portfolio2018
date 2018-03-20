@@ -37,16 +37,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Who</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#skills">Tech</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">What</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Where</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Connect</a>
+              <a class="nav-link js-scroll-trigger" href="#skills">How</a>
             </li>
           </ul>
         </div>
@@ -70,7 +70,7 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class=" text-uppercase">Who is Bald Mike?</h2>
-            <h3 class="section-subheading text-muted">Dedicated, determined problem-solver with an eye for detail, a heart for others and a passion for creation. Pit Bull lover/foster/adopter/advocate/roommate. Volunteer. Equally at home in front of an audience or a screen. Bath-taker. Reformed night person. Impatiently optimistic. Music maker/mixer/lover/listener. Weak spot for the underdog. Sucker for a happy ending.</h3>
+            <h3 class="section-subheading text-muted">Dedicated, determined problem-solver with an eye for detail, a heart for others and a passion for creation. Pit Bull lover/foster/adopter/advocate/roommate. Volunteer. Equally at home in front of an audience or a screen. Bath taker. Reformed night person. Unrealistically optimistic. Music maker/mixer/lover/listener. Weak spot for the underdog. Sucker for a happy ending.</h3>
             <h3 class="section-subheading text-muted">And I freakin' love making computers do stuff.</h3>
             </h3>
           </div>
@@ -232,7 +232,7 @@
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <i class="fa fa-play-circle-o fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="{% static 'portfolio_app/img/portfolio/resqmia.png' %}" alt="">
@@ -246,7 +246,7 @@
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <i class="fa fa-play-circle-o fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="{% static 'portfolio_app/img/portfolio/crosstown.png' %}" alt="">
@@ -260,7 +260,7 @@
             <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
               <div class="portfolio-hover">
                 <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
+                  <i class="fa fa-play-circle-o fa-3x"></i>
                 </div>
               </div>
               <img class="img-fluid" src="{% static 'portfolio_app/img/portfolio/wagdog.png' %}" alt="">
@@ -350,21 +350,23 @@
                   <p class="item-intro text-muted">Save them all!</p>
                   <div class="project-box">
                     <a href="/resQmia"><img class="img-fluid d-block mx-auto" src="{% static  'portfolio_app/img/portfolio/resqmia.png' %}" alt=""></a>
-                    <p class="item-intro text-muted"><em>Click the image, then click "login" for a demo. To return, click "logout".</em></p>
+                    <p class="instructions"><em>Click the image, then click "login" for a demo. To return, click "logout".</em></p>
                   </div>
-                    <p>resQmia.com is a true labor of love!  I've been actively involved in animal rescue for years, and have always wanted to do more. When I heard my girlfriend, Mia (the director of operations of Alive Rescue) lament that she couldn't keep up with the 10 different spread sheets she uses to track the animals, the light bulb began to glow. It was dim at first, but it glowed.</p>
-                    <p>resQmia.com, built in Python/Django, allows for the tracking of animals through the rescue journey with reminders for vetting and necessary services. It supports image-upload, allows the user to sort based on needed services and features are being added as quickly as I can respond to "I really need it to _______!!"</p>
-                    <p>Click on the image to load the app, and then click 'Login' - no credentials necessary.  When you're finished checking it out (This is a demo version, so please feel free to play!  Give a dog a vaccine! Go nuts!), simply click 'Logout' on the top right to bring you back.</p>
-                  
-                    <ul class="list-inline">
+
+                  <hr>
+                  <p>resQmia.com is a true labor of love!  I've been actively involved in animal rescue for years, and have always wanted to do more. When I heard my girlfriend, Mia (the director of operations of Alive Rescue) lament that she couldn't keep up with the 10 different spread sheets she uses to track the animals, the light bulb began to glow. It was dim at first, but it glowed.</p>
+                  <p>resQmia.com, built in Python/Django, allows for the tracking of animals through the rescue journey with reminders for vetting and necessary services. It supports image-upload, allows the user to sort based on needed services and features are being added as quickly as I can respond to "I really need it to _______!!"</p>
+                  <p>Click on the image to load the app, and then click 'Login' - no credentials necessary.  When you're finished checking it out (This is a demo version, so please feel free to click to your heart's content!), simply click 'Logout' on the top right to bring you back.</p>
+                
+                  <ul class="list-inline">
                     <li>Date: January 2018</li>
                     <li>Tech: Python, Django, JavaScript, Jquery, Bootstrap</li>
                     <li>Deployment: <a href="http://www.resQmia.com" target="blank">www.resQmia.com</a>, Digital Ocean, Linux Ubuntu</li>
                     <li>GitHub: <a href="https://github.com/baldmike/resQmia" target="blank">https://github.com/baldmike/resQmia</a></li>
                   </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fa fa-times"></i>
+                  Close</button>
                 </div>
               </div>
             </div>
@@ -392,18 +394,17 @@
                   <p class="item-intro text-muted">88 or 108 years? Sweep the World Series or make your fans suffer through 7 games? I'm totally unbiased, YOU decide who's better!</p>
                 
 
-                  <div class="project box">
+                  <div class="project-box">
                     <a href="/baseball"><img class="img-fluid d-block mx-auto" src="{% static 'portfolio_app/img/portfolio/crosstown.png' %}" alt="Crosstown Classic screen shot"></a>
-                    <p class="item-intro text-muted">Click the image to play.  Use the controls on the top left, and click the red button on the bottom to bring you back when you're done.</p>
+                    <p class="instructions">Click the image to play.  Use the controls on the top left to play, and click the red button on the bottom to bring you back when you're done.</p>
                   </div>
                   
-
+                  <hr>
                   <p>The 2005 World Champion Chicago White Sox host the 2016 World Champion Chicago Cubs in the game every Chicagoan has an opinion about...  Written in Python/Django, relying heavily on session and taking a less-is-more approach to design, this game allows you to play 9 full innings, pitch by picth, responsively and interactively.</p>
+                  
                   <p>As a baseball lover and born-again tech nerd, this simple project is decades in the making for me and is the first thing I worked on upon completion of a coding bootcamp.  I built and utilized a simple API to populate the teams with the 9 unique players that held that lineup position most often in that season.  While each player currently has the same statistical outcomes, the ability for future customization of individual player's stats was written in.</p>
                                  
-                  <p>Click the image above to play. Use the controls on the top left to pitch while on the field and either swing or watch the pitch while up to bat. Baserunners situationally advance automatically and all outcomes are statiscally ~VERY CLOSE!~ based on actual MLB statistics. Enjoy!</p>
-
-                  <p>When you've had enough, click the red button on the bottom of the page to bring you back here!</p>
+                  <p>Click the image above to play, and the red button at the bottom to bring you back. Use the controls on the top left to pitch while on the field and either swing or watch the pitch while up to bat. Baserunners situationally advance automatically and all outcomes are statiscally ~VERY CLOSE!~ based on actual MLB statistics. Enjoy!</p>
 
                   <ul class="list-inline">
                     <li>Date: December 2017</li>
@@ -438,6 +439,8 @@
                   <h2 class="text-uppercase">Wag Dog!</h2>
                   <p class="item-intro text-muted">Lonely, dog?</p>
                   <iframe width="560" height="315" src="https://www.youtube.com/embed/XvSxZLzXVRs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                  <hr>
                   <p>Designed and presented for Coding Dojo's 'Project Week' as a team project with cohort-mates <a href="https://github.com/ANickow">Alyssa Nickow</a> and <a href="https://github.com/julianauza">Julian Auza</a>. The original idea was a Match.Com clone, but once we learned that the dog dating community is grossly underserved, we put on our capes and set out to rectify that (and learned that there is a dating-site Lorem).</p>
                   <p>WagDog ("What a Good Dog!") allows a user to register, upload a picture and create a detailed personal profile.  Once a profile is created, an algorithm matches the pup to dogs of similar lifestyles, hopes and dreams. If a butt-sniff is in order, the app allows you to send a "wink" or, for the slightly more brave breeds (usually Chihuahuas), in-app messaging to lay it on the line. Chihuahua coming on too strong? Block 'em!</p>
                   <p>Focusing on GitHub-based pair programming and project deadlines, 'Project Week' is intended to mimic the pressure and time constraints involved in delivering the MVP, as agreed on by the entire cohort.  'Finishing' WagDog a day early gave us the opportunity to slightly refactor some code and add a couple non-MVP features (messaging and user-block). Given more time, we all agreed that cleaning up the existing code would have taken preference over new, shiny features. But, hey, they work!</p>

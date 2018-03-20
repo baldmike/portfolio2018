@@ -191,9 +191,6 @@ $(document).ready(function(){
 
 
 
-
-
-
     current_cat_selection = '#all_alerts_cat'
     current_cat_button = '#show_all_alerts_cat'
     console.log('Current cat view is', current_cat_selection)
