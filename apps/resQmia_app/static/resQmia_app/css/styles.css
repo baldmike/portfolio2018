@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url('../images/back3.jpg');
+    background-image: url('../images/puppy6.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -20,7 +20,7 @@ li {
 }
 
 a {
-    color: black;
+    color: white;
 }
 
 button:focus {
@@ -60,13 +60,15 @@ button:hover {
 
 .animal-list {
     font-family: 'Anton', sans-serif;
+    color: white;
 }
+
 .list-box {
     height: 65vh;
     margin-bottom: 10px;
     border-radius: 10px;
-    background-color: tan;
-    opacity: .8;
+    background-color: rgb(58, 53, 53);
+    opacity: .9;
     overflow: scroll;
 }
 
@@ -91,7 +93,8 @@ button:hover {
 }
 
 .api-strip {
-    font-family: 'Anton', sans-serif;
+    /* font-family: 'Anton', sans-serif; */
+    font-weight: 400;
     color: black;
     text-shadow: 2px 2px 2px white;
     margin: 5px;
@@ -115,7 +118,7 @@ button:hover {
 
 .navbar {
     margin-bottom: 0px;
-    background-color: tan;
+    background-color: gray;
     opacity: .7;
     font-size: 30px;
 }
@@ -205,5 +208,8 @@ button:hover {
     font-family: 'Acme', sans-serif;
 }
 
+.white {
+    color: white;
+}
 
     

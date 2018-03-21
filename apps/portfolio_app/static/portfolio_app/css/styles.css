@@ -738,3 +738,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .instructions {
   padding-bottom: 30px;
 }
+
+.yellow {
+  color: #fec503;
+}
