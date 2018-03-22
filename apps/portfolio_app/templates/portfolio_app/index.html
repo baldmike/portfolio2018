@@ -23,6 +23,9 @@
     <link href="https://fonts.googleapis.com/css?family=Flavors|Rammetto+One|Syncopate" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
     
+    
+
+
   </head>
 
   <body id="page-top">
@@ -37,20 +40,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about"><span class="yellow"><i class="fa fa-user"></i></span>Who</a>
+            <li class="nav-item" data-toggle="tooltip" title="About" data-placement="bottom">
+              <a class="nav-link js-scroll-trigger" href="#about"><i class="fa fa-user"></i></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio"><span class="yellow"><i class="fa fa-briefcase"></i></span>What</a>
+            <li class="nav-item" data-toggle="tooltip" title="Tech Skills" data-placement="bottom">
+              <a class="nav-link js-scroll-trigger" href="#skills"><i class="fa fa-laptop"></i></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact"><span class="yellow"><i class="fa fa-globe"></i></span>Where</a>
+            <li class="nav-item" data-toggle="tooltip" title="Portfolio" data-placement="bottom">
+              <a class="nav-link js-scroll-trigger" href="#portfolio"><i class="fa fa-briefcase"></i></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#timeline"><span class="yellow"><i class="fa fa-question-circle"></i></span>Why</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#skills"><span class="yellow"><i class="fa fa-laptop"></i></span>How</a>
+            <li class="nav-item" data-toggle="tooltip" title="Connect" data-placement="bottom">
+              <a class="nav-link js-scroll-trigger" href="#contact"><i class="fa fa-globe"></i></a>
             </li>
           </ul>
         </div>
@@ -67,7 +67,9 @@
         </div>
       </div>
     </header>
-
+    
+    <div class="connected"></div>
+    
     <!-- About -->
     <section id="about">
       <div class="container">
@@ -170,6 +172,8 @@
       </div>
     </section>
 
+    <div class="connected"></div>
+
     <!-- tech skills -->
     <section class="py-5" id="skills">
       <div class="margin"></div>
@@ -221,6 +225,8 @@
         </div>
       </div>
     </section>
+
+    <div class="connected"></div>
 
     <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
@@ -278,6 +284,7 @@
       </div>
     </section>
 
+    <div class="connected"></div>
 
     <!-- Contact -->
     <section id="contact">
@@ -325,6 +332,7 @@
       </div>
     </section>
 
+    
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -466,12 +474,12 @@
       </div>
     </div>
 
-    
-
     <script src="{% static 'portfolio_app/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'portfolio_app/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'portfolio_app/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
     <script src="{% static 'portfolio_app/js/portfolio.min.js' %}"></script>
+
+    
 
   </body>
 
