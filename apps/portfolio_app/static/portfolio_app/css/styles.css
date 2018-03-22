@@ -745,9 +745,45 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .connected {
   background-image: url("../img/internet.jpg");
-  min-height: 700px; 
+  min-height: 75vh; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
+}
+
+.connected1:after {
+  color: white;
+  font-size: 100px;
+  content: "About";
+  position: relative;
+  left: 60%;
+  top: 400px;
+}
+
+.connected2:after {
+  color: white;
+  font-size: 100px;
+  content: "Tech Skills";
+  position: relative;
+  left: 10%;
+  top: 400px;
+}
+
+.connected3:after {
+  color: white;
+  font-size: 100px;
+  content: "Portfolio";
+  position: relative;
+  left: 40%;
+  top: 300px;
+}
+
+.connected4:after {
+  color: white;
+  font-size: 100px;
+  content: "Connect";
+  position: relative;
+  left: 20%;
+  top: 200px;
 }
