@@ -746,7 +746,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .connected {
   background-image: url("../img/internet.jpg");
   min-height: 700px; 
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

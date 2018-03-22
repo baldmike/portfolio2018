@@ -1,4 +1,4 @@
-# This will create a user
+# This will create the roster
 # run from resQmia ROOT
 # python manage.py shell
 # execfile('./inits/create_roster.py')
