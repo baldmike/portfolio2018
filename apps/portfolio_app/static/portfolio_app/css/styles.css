@@ -775,8 +775,8 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   font-size: 100px;
   content: "Portfolio";
   position: relative;
-  left: 40%;
-  top: 300px;
+  left: 60%;
+  top: 400px;
 }
 
 .connected4:after {
@@ -784,6 +784,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   font-size: 100px;
   content: "Connect";
   position: relative;
-  left: 20%;
-  top: 200px;
+  left: 10%;
+  top: 400px;
 }
