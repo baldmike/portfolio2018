@@ -738,19 +738,22 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   color: #fec503;
 }
 
-.connected {
-  background-image: url("../img/internet.jpg");
-  min-height: 600px; 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: white;
-  font-family: 'Syncopate', sans-serif;
-  letter-spacing: 1px;
-}
+
 
 @media (min-width: 300px) {
+
+  .connected {
+    background-image: url("../img/internet.jpg");
+    min-height: 200px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Syncopate', sans-serif;
+    letter-spacing: 1px;
+  }
+
   .connected1:after {
     content: "About";
     position: sticky;
@@ -786,6 +789,19 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 
 @media (min-width: 900px) {
+
+  .connected {
+    background-image: url("../img/internet.jpg");
+    min-height: 600px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Syncopate', sans-serif;
+    letter-spacing: 1px;
+  }
+
   .connected1:after {
     content: "About";
     position: sticky;
