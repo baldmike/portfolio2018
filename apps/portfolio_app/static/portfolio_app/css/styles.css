@@ -121,7 +121,6 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand {
-  color: #fed136;
   font-family: 'Bowlby One SC', cursive;
 }
 
@@ -655,9 +654,7 @@ ul.social-buttons {
 ul.social-buttons li a {
   text-align: center;
   font-size:60px;
-  display:block;width:100px;
-  height:100px;
-  width: 100px;
+  display:block;
   -webkit-transition:all .3s;
   -moz-transition:all .3s;
   transition:all .3s;
@@ -667,7 +664,8 @@ ul.social-buttons li a {
 }
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-  background-color: #fed136;
+  font-size:70px;
+  color: #fed136;
   text-decoration: none;
 }
 
@@ -718,7 +716,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   font-family: 'Flowers', cursive;
   /* font-family: 'Rammetto One', cursive; */
   color: red;
-  
 }
 
 #mainNav {
@@ -743,7 +740,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .connected {
   background-image: url("../img/internet.jpg");
-  min-height: 500px; 
+  min-height: 600px; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -751,60 +748,60 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   color: white;
   font-family: 'Syncopate', sans-serif;
   letter-spacing: 1px;
-  font-size: 30px; 
 }
 
 @media (min-width: 300px) {
   .connected1:after {
     content: "About";
-    position: sticky;
-    margin-left: 50%;
-    top: 250px;
-    font-size: 40px;
-  }
-}
-
-@media (min-width: 900px) {
-  .connected1:after {
-    content: "About";
-    position: sticky;
-    margin-left: 50%;
-    top: 250px;
-    font-size: 100px;
-  }
-}
-
-@media (min-width: 300px) {
-  .connected2:after {
-    content: "Tech";
-    position: sticky;
-    margin-left: 50%;
-    top: 250px;
-    font-size: 40px;
-  }
-}
-
-@media (min-width: 900px) {
-  .connected2:after {
-    content: "Tech";
-    position: sticky;
-    margin-left: 50%;
-    top: 250px;
-    font-size: 100px;
-  }
-}
-
-@media (min-width: 300px) {
-  .connected3:after {
-    content: "Portfolio";
     position: sticky;
     margin-left: 10%;
     top: 250px;
-    font-size: 40px;
+    font-size: 50px;
+  }
+
+  .connected2:after {
+    content: "Tech";
+    position: sticky;
+    margin-left: 10%;
+    top: 250px;
+    font-size: 50px;
+  }
+
+  .connected3:after {
+    content: "Portfolio";
+    position: sticky;
+    margin-left: 5%;
+    top: 250px;
+    font-size: 50px;
+  }
+
+  .connected4:after {
+    content: "Connect";
+    position: sticky;
+    margin-left: 10%;
+    top: 250px;
+    font-size: 50px;
   }
 }
 
+
 @media (min-width: 900px) {
+  .connected1:after {
+    content: "About";
+    position: sticky;
+    margin-left: 50%;
+    top: 250px;
+    font-size: 100px;
+  }
+
+  .connected2:after {
+    content: "Tech";
+    position: sticky;
+    margin-left: 50%;
+    top: 250px;
+    font-size: 100px;
+  }
+
   .connected3:after {
     content: "Portfolio";
     position: sticky;
@@ -812,19 +809,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     top: 250px;
     font-size: 100px;
   }
-}
 
-@media (min-width: 300px) {
-  .connected4:after {
-    content: "Connect";
-    position: sticky;
-    margin-left: 50%;
-    top: 250px;
-    font-size: 40px;
-  }
-}
-
-@media (min-width: 900px) {
   .connected4:after {
     content: "Connect";
     position: sticky;
