@@ -694,7 +694,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .title {
   color: #fed136;
   font-family: 'Syncopate', sans-serif;
-  letter-spacing: 12px;
+  letter-spacing: 6px;
 }
 
 .title2 {
@@ -754,16 +754,16 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .connected1:after {
   color: white;
-  font-size: 100px;
+  font-size: 50px;
   content: "About";
   position: relative;
-  left: 60%;
+  left: 10%;
   top: 400px;
 }
 
 .connected2:after {
   color: white;
-  font-size: 100px;
+  font-size: 50px;
   content: "Tech Skills";
   position: relative;
   left: 10%;
@@ -772,16 +772,16 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .connected3:after {
   color: white;
-  font-size: 100px;
+  font-size: 50px;
   content: "Portfolio";
   position: relative;
-  left: 60%;
+  left: 10%;
   top: 400px;
 }
 
 .connected4:after {
   color: white;
-  font-size: 100px;
+  font-size: 50px;
   content: "Connect";
   position: relative;
   left: 10%;
