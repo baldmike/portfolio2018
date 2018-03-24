@@ -29,9 +29,7 @@ h4,
 h5,
 h6 {
   font-weight: 800;
-  /* font-family: 'Montserrat', 'Helvetica Neue', 'Lobster',Helvetica, Arial, sans-serif;
-   */
-   font-family: 'Syncopate', sans-serif;
+  font-family: 'Syncopate', sans-serif;
 
 }
 
@@ -745,45 +743,94 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .connected {
   background-image: url("../img/internet.jpg");
-  min-height: 75vh; 
+  min-height: 500px; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
+  color: white;
+  font-family: 'Syncopate', sans-serif;
+  letter-spacing: 1px;
+  font-size: 30px; 
 }
 
-.connected1:after {
-  color: white;
-  font-size: 50px;
-  content: "About";
-  position: relative;
-  left: 10%;
-  top: 400px;
+@media (min-width: 300px) {
+  .connected1:after {
+    content: "About";
+    position: sticky;
+    margin-left: 50%;
+    top: 250px;
+    font-size: 40px;
+  }
 }
 
-.connected2:after {
-  color: white;
-  font-size: 50px;
-  content: "Tech Skills";
-  position: relative;
-  left: 10%;
-  top: 400px;
+@media (min-width: 900px) {
+  .connected1:after {
+    content: "About";
+    position: sticky;
+    margin-left: 50%;
+    top: 250px;
+    font-size: 100px;
+  }
 }
 
-.connected3:after {
-  color: white;
-  font-size: 50px;
-  content: "Portfolio";
-  position: relative;
-  left: 10%;
-  top: 400px;
+@media (min-width: 300px) {
+  .connected2:after {
+    content: "Tech";
+    position: sticky;
+    margin-left: 50%;
+    top: 250px;
+    font-size: 40px;
+  }
 }
 
-.connected4:after {
-  color: white;
-  font-size: 50px;
-  content: "Connect";
-  position: relative;
-  left: 10%;
-  top: 400px;
+@media (min-width: 900px) {
+  .connected2:after {
+    content: "Tech";
+    position: sticky;
+    margin-left: 50%;
+    top: 250px;
+    font-size: 100px;
+  }
 }
+
+@media (min-width: 300px) {
+  .connected3:after {
+    content: "Portfolio";
+    position: sticky;
+    margin-left: 50%;
+    top: 250px;
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  .connected3:after {
+    content: "Portfolio";
+    position: sticky;
+    margin-left: 50%;
+    top: 250px;
+    font-size: 100px;
+  }
+}
+
+@media (min-width: 300px) {
+  .connected4:after {
+    content: "Connect";
+    position: sticky;
+    margin-left: 50%;
+    top: 250px;
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 900px) {
+  .connected4:after {
+    content: "Connect";
+    position: sticky;
+    margin-left: 50%;
+    top: 250px;
+    font-size: 100px;
+  }
+}
+
