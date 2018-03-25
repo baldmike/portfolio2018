@@ -738,6 +738,13 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   color: #fec503;
 }
 
+.glow {
+  transition: 1s;
+}
+
+.glow:hover {
+  transform: scale(2);
+}
 
 
 @media (min-width: 300px) {
