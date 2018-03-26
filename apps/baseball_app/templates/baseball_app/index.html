@@ -2,19 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta name='viewport' content="width=device-width initial-scale=1.0" media="screen" charset="UTF-8">
-
-    <title>Crosstown Classic</title>
-    
-    {% load static %}
-    
-    <link rel="icon" type="image/x-icon" href="{% static 'baseball_app/favicon/favicon.ico' %}">
+    <meta name='viewport' content="width=device-width initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'baseball_app/css/styles.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'baseball_app/css/styles.css' %}" media="screen" title="Baseball" charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"                     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="{% static 'baseball_app/baseball_js.js' %}"></script>
 </head>
@@ -24,16 +17,16 @@
     <div class="container">
 
         <div class="col-xs-12 inning_box">
-            <div class = "col-md-4 col-xs-12">
-                <h3 class = "headline"><img src="{% static 'images/cubs_logo.jpeg' %}" width="60"> Cubs: {{request.session.visitor_score}}</h3>
+            <div class = "col-md-4 col-xs-6">
+                <h3 class = "headline"><img src="{% static 'images/cubs_logo.jpeg' %}" width="60"> <span class="mobile-hide">Cubs: </span> {{request.session.visitor_score}}</h3>
             </div>
             
-            <div class = "col-md-4 col-xs-12">
-                <h3 style= "font-family: 'Cinzel', serif;">{{request.session.inning}}</h3>
+            <div class = "col-md-4 mobile-hide">
+                <h3>{{request.session.inning}}</h3>
             </div>
 
-            <div class = "col-md-4 col-xs-12">
-                <h3 class = headline><img src="{% static 'images/sox_logo.jpeg' %}" width="60"> White Sox: {{request.session.home_score}} </h3>
+            <div class = "col-md-4 col-xs-6">
+                <h3 class = "headline"><img src="{% static 'images/sox_logo.jpeg' %}" width="60"><span class="mobile-hide"> White Sox: </span> {{request.session.home_score}} </h3>
             </div>
         </div>
             
@@ -43,7 +36,7 @@
             {% if request.session.side == 'bottom' %}
             <div class = "col-xs-12 col-md-2 side-boxL">
             
-                    <form action="/baseball/swing" method="post">
+                    <form action="/swing" method="post">
                         {% csrf_token %}
                         <input type="submit" value=" Pitch " name = "swing" class="button">
                     </form>                
@@ -54,12 +47,12 @@
             {% if request.session.side == 'top' %}
             <div class = "col-xs-12 col-md-2 side-boxL">
                     
-                    <form action="/baseball/swing" method="post">
+                    <form action="/swing" method="post">
                         {% csrf_token %}
                         <input type="submit" value=" Swing " name = "swing" class="button">
                     </form>
                 
-                    <form action="/baseball/watch" method="post">
+                    <form action="watch" method="post">
                         {% csrf_token %}
                         <input type="submit" value=" Watch " name = "watch" class="button">
                     </form>
@@ -82,24 +75,24 @@
             </div>
             <div class="col-md-2 col-xs-12 side-boxR">
 
-                <h4 class="cinzel-font">Ball: {{request.session.ball}}</h4>
-                <h4 class="cinzel-font">Strike: {{request.session.strike}}</h4>
-                <h4 class="cinzel-font">Out: {{request.session.out}}</h4>
+                <h4>Ball: {{request.session.ball}}</h4>
+                <h4>Strike: {{request.session.strike}}</h4>
+                <h4>Out: {{request.session.out}}</h4>
 
             </div>
         </div>
 
-        <div class="col-xs-12"><h4 style= "font-family: 'Cinzel', serif;">Now batting: <span style = "font-family: 'Gloria Hallelujah', cursive;">{{ request.session.batter }}</span> </h4></div>
+        <div class="col-xs-12"><h4><span class="now_batting">Now batting: {{ request.session.batter }}</span></h4></div>
 
         <div class="scoreboard">
             <table class="col-xs-12 table-bordered">
-                <thead class="cinzel-font">
+                <thead>
                     <tr>
                         <th> </th>
                         {% for i in inning %}
-                        <th style= "font-family: 'Cinzel', serif;"> {{i}} </th>
+                        <th> {{i}} </th>
                         {% endfor %}
-                        <th style= "font-family: 'Cinzel', serif;"> Score </th>
+                        <th> Score </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -143,9 +136,9 @@
 
         <div class="col-xs-12">
             <br>
-            <form action="/baseball/reset" method="post">
+            <form action="/reset" method="post">
                 {% csrf_token %}
-                <input type="submit" value=" Get Me Outta Here! " name = "reset" class="button_reset">
+                <input type="submit" value=" RESET " name = "reset" class="button_reset">
             </form>
         </div>  
         

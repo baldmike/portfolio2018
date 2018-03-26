@@ -78,7 +78,6 @@ h3 {
 @media (min-width: 300) {
 
     .side-boxR {
-        font-family: 'Cinzel', serif;
         margin-top: 90px;
         margin-left: -70px;
     }    
@@ -97,7 +96,6 @@ h3 {
     width: 120px;
     border-radius: 10px;
     font-size: 20px;
-    font-family: 'Cinzel', serif;
     background-color: black;
     color: white;
 }
@@ -109,7 +107,7 @@ h3 {
 .button_reset {
     margin: 10px;
     height: 30px;
-    width: 200px;
+    width: 90px;
     border-radius: 10px;
     background-color: red;
     color: white;
@@ -133,9 +131,22 @@ h3 {
 .field {
     padding-bottom: 40px;
     padding-top: 20px;
-    
 }
 
-.cinzel-font {
-    font-family: 'Cinzel', serif;
+.now_batting {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+}
+
+@media (min-width: 300px) {
+    .mobile-hide{
+        display: none;
+    }
+}
+
+@media (min-width: 700px) {
+    .mobile-hide {
+        display: inline-block;
+    }
 }
