@@ -11,7 +11,7 @@
     height: 500px;
     color: white;
     background-color: black;
-    background-image: url(/images/scoreboard.jpg);
+    background-image: url("../images/scoreboard.jpg");
     background-attachment: fixed;
 }
 
