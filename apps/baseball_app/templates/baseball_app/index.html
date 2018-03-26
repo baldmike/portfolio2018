@@ -36,7 +36,7 @@
             {% if request.session.side == 'bottom' %}
             <div class = "col-xs-12 col-md-2 side-boxL">
             
-                    <form action="/swing" method="post">
+                    <form action="/baseball/swing" method="post">
                         {% csrf_token %}
                         <input type="submit" value=" Pitch " name = "swing" class="button">
                     </form>                
@@ -47,12 +47,12 @@
             {% if request.session.side == 'top' %}
             <div class = "col-xs-12 col-md-2 side-boxL">
                     
-                    <form action="/swing" method="post">
+                    <form action="/baseball/swing" method="post">
                         {% csrf_token %}
                         <input type="submit" value=" Swing " name = "swing" class="button">
                     </form>
                 
-                    <form action="watch" method="post">
+                    <form action="/baseball/watch" method="post">
                         {% csrf_token %}
                         <input type="submit" value=" Watch " name = "watch" class="button">
                     </form>
@@ -136,7 +136,7 @@
 
         <div class="col-xs-12">
             <br>
-            <form action="/reset" method="post">
+            <form action="/baseball/reset" method="post">
                 {% csrf_token %}
                 <input type="submit" value=" RESET " name = "reset" class="button_reset">
             </form>
